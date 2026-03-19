@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-sand: #F5EDE3;
+  --color-olive: #6B9E78;
+  --color-olive-light: #8BC49A;
+  --color-soft-beige: #FAF7F2;
+  --color-off-white: #FFFFFF;
+  --color-muted-black: #1A1A1A;
+  --color-warm-glow: #E8B87D;
+  --color-soft-sage: #EDF4ED;
+  --color-cream: #FFF9F0;
+  --font-sans: 'Outfit', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-delayed: float 6s ease-in-out 3s infinite;
+  --animate-shimmer: shimmer 3s ease-in-out infinite;
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes shimmer {
+
+    0%,
+    100% {
+      opacity: 0.6;
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-off-white);
+    color: var(--color-muted-black);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+}
+
+@utility glass-panel {
+  background-color: rgb(255 255 255 / 0.15);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgb(255 255 255 / 0.25);
+}
+
+@utility glass-panel-light {
+  background-color: rgb(255 255 255 / 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgb(255 255 255 / 0.6);
+  box-shadow: 0 8px 32px rgb(0 0 0 / 0.06);
+}
