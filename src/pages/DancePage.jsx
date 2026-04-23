@@ -52,21 +52,21 @@ const performances = [
         name: "Sidewalk Stories",
         subtitle: "Choreography by Company E",
         info: "Urban narratives told through contemporary movement and expression",
-        country: "NYC",
+        country: "NYC / Tunisia",
         images: [side500, side501, side502, side503, side504, side505],
     },
     {
         name: "Dune: Fragment Tunisien",
         subtitle: "Choreography by Volca Company",
-        info: "An evocative fragment inspired by Tunisian landscapes and movement",
-        country: "France",
+        info: "An evocative fragment inspired by Tunisian landscapes and movement.\nAn intimate dance exploration of women's voices, identity, and resistance within Tunisian society.",
+        country: "France / Tunisia",
         images: [dune400, dune401, dune402, dune403, dune404, dune405, dune406, dune407, dune408, dune409, dune410, dune411],
     },
     {
         name: "Laboratoire D.A.N.C.E",
         subtitle: "Yvann Alexandre Company",
         info: "A laboratory of dance exploration and creative expression",
-        country: "France",
+        country: "France / Tunisia",
         images: [labo1, labo2, labo3, labo4],
     },
     {
@@ -113,7 +113,7 @@ const PhotoGallery = ({ images, name }) => {
                     {images.map((imgSrc, index) => {
                         let distance = index - current;
                         if (distance < 0) distance += images.length;
-                        
+
                         // Only render the top 3 cards for the stack effect
                         if (distance >= 3) return null;
 
@@ -155,24 +155,24 @@ const PhotoGallery = ({ images, name }) => {
             </div>
 
             {/* Navigation arrows */
-            images.length > 1 && (
-                <>
-                    <button
-                        onClick={retreat}
-                        className="absolute left-0 md:-left-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/70 backdrop-blur-lg text-muted-black flex items-center justify-center opacity-0 group-hover:opacity-100 hover:bg-white transition-all duration-300 z-50 border border-white shadow-[0_5px_15px_rgba(0,0,0,0.15)] hover:scale-105"
-                        aria-label="Previous photo"
-                    >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
-                    </button>
-                    <button
-                        onClick={advance}
-                        className="absolute right-0 md:-right-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/70 backdrop-blur-lg text-muted-black flex items-center justify-center opacity-0 group-hover:opacity-100 hover:bg-white transition-all duration-300 z-50 border border-white shadow-[0_5px_15px_rgba(0,0,0,0.15)] hover:scale-105"
-                        aria-label="Next photo"
-                    >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
-                    </button>
-                </>
-            )}
+                images.length > 1 && (
+                    <>
+                        <button
+                            onClick={retreat}
+                            className="absolute left-0 md:-left-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/70 backdrop-blur-lg text-muted-black flex items-center justify-center opacity-0 group-hover:opacity-100 hover:bg-white transition-all duration-300 z-50 border border-white shadow-[0_5px_15px_rgba(0,0,0,0.15)] hover:scale-105"
+                            aria-label="Previous photo"
+                        >
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
+                        </button>
+                        <button
+                            onClick={advance}
+                            className="absolute right-0 md:-right-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/70 backdrop-blur-lg text-muted-black flex items-center justify-center opacity-0 group-hover:opacity-100 hover:bg-white transition-all duration-300 z-50 border border-white shadow-[0_5px_15px_rgba(0,0,0,0.15)] hover:scale-105"
+                            aria-label="Next photo"
+                        >
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
+                        </button>
+                    </>
+                )}
         </div>
     );
 };
@@ -278,7 +278,7 @@ const DancePage = () => {
                                 <p className="text-muted-black/70 font-medium text-sm md:text-base mb-2">
                                     {perf.subtitle}
                                 </p>
-                                <p className="text-muted-black/45 font-light leading-relaxed text-sm md:text-base mb-6">
+                                <p className="text-muted-black/45 font-light leading-relaxed text-sm md:text-base mb-6 whitespace-pre-line">
                                     {perf.info}
                                 </p>
 
@@ -348,7 +348,7 @@ const DancePage = () => {
                         <h2 className="text-3xl md:text-5xl font-serif text-muted-black mb-4">
                             Ready to <span className="italic text-dance-warm">express</span>, move, and create?
                         </h2>
-                        <p className="text-muted-black/40 font-light mb-10 max-w-md mx-auto">Begin your dance journey today with a personalized session.</p>
+                        <p className="text-muted-black/40 font-light mb-10 max-w-md mx-auto">Begin your dance journey today.</p>
                         <a
                             href="https://wa.me/35677418079"
                             target="_blank"
