@@ -58,7 +58,7 @@ const performances = [
     {
         name: "Dune: Fragment Tunisien",
         subtitle: "Choreography by Volca Company",
-        info: "An evocative fragment inspired by Tunisian landscapes and movement.\nAn intimate dance exploration of women's voices, identity, and resistance within Tunisian society.",
+        info: "An intimate dance exploration of women's voices, identity, and resistance within Tunisian society.",
         country: "France / Tunisia",
         images: [dune400, dune401, dune402, dune403, dune404, dune405, dune406, dune407, dune408, dune409, dune410, dune411],
     },
