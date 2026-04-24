@@ -81,7 +81,7 @@ const performances = [
 const classes = [
     {
         title: "Contemporary Floorbarre",
-        description: "Focuses on strength, alignment, and mobility through floor-based exercises inspired by contemporary dance and Pilates, offering a comprehensive full-body conditioning experience.",
+        description: "Focuses on strength, alignment, and mobility through Floorbarre exercises inspired by contemporary dance and Pilates, offering a comprehensive full-body conditioning experience.",
     },
     {
         title: "Somatic Movement & Improvisation",
